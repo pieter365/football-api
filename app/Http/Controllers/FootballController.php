@@ -92,14 +92,26 @@ class FootballController extends Controller
      */
     public function homepageLiveFormat($data) {
         $live = array();
+        $marketName = '';
+        $marketId = '';
+        $marketType = '';
+        $marketPrice = '';
 
-        $footballLive = $this->jsonDecode($data);
-        $footballLive = array_shift($footballLive);
+        $footballLiveMain = $this->jsonDecode($data);
+        $footballLive = array_shift($footballLiveMain);
 
         foreach($footballLive as $game => $event){
 
-          $linkedEventId = '';
-          $linkedEventTypeName = '';
+            foreach($footballLiveMain['markets'] as $markets => $market){
+
+                $marketName = $market[0]['name'];
+                $marketId = $market[0]['marketId'];
+                $marketType = $market[0]['type'];
+                $marketPrice = $market[0]['liabilities']['livePriceLimit'];
+             }   
+
+            $linkedEventId = '';
+            $linkedEventTypeName = '';
 
             if (!empty($event['linkedEventId'])) {
               $linkedEventId = $event['linkedEventId'];
@@ -130,7 +142,12 @@ class FootballController extends Controller
                 'status_suspended' => $event['status']['suspended'], 
                 'status_requestabet' => $event['status']['requestabet'], 
                 'boostCount' => $event['boostCount'], 
+                'marketName' => $marketName,
+                'marketId' => $marketId,
+                'marketType' => $marketType,
+                'marketPrice' => $marketPrice,
                 'superBoostCount' => $event['superBoostCount']
+
               );
         }
 

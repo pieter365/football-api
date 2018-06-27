@@ -15,64 +15,6 @@
         <link rel="stylesheet" href="/css/main.css">
 
         <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-        <style>
-
-
-        .match-cell {
-            width: 100%;
-            clear: both;
-
-            border-bottom: 1px solid #CCC;
-            padding: 8px 0 35px 0;
-        } 
-        .match-live {
-            float: left;
-            font-size: 9px;
-            color: #CC0000;
-            width: 7%;
-        }
-        .match-ft {
-          float: left;
-        }
-        .match-time {
-            float: left;
-            font-size: 10px;
-            width: 7%;
-        }
-        .match-name {
-          float: left;
-          font-weight: bold;
-          font-size: 12px;
-        }
-
-.leaderboard-items {
-            float: right;
-          font-size: 10px;
-          color: #000;
-}
-
-        div.game-startdate {
-            background-color: #CCCCCC;
-            padding: 3px;
-            border: 0 solid #dde3ea;
-            border-top-width: 1px;
-            -ms-word-break: break-all;
-            word-break: break-all;
-            word-break: break-word;
-            -webkit-hyphens: auto;
-            -moz-hyphens: auto;
-            hyphens: auto;
-            text-indent: 3px;
-            font-size: 13px;
-            font-weight: bold;
-        }
-
-.market-main {
-  display: block;
-  clear: both;
-}
-
-  </style>
     </head>
     <body>
 

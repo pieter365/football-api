@@ -28,6 +28,11 @@
                             status_requestabet = data[i].status_requestabet;
                             superBoostCount = data[i].superBoostCount;  
 
+                            //markets
+                            marketName = data[i].marketName; 
+                            marketId = data[i].marketId; 
+                            marketType = data[i].marketType; 
+                            marketPrice = data[i].marketPrice; 
 
                             if (!todayDate) {
                               generate_html += '<div class="game-startdate">'+startDate+'</div>';
@@ -39,8 +44,8 @@
                             generate_html += '<div class="match-cell" data-oc-id="' + eventId + '">';
                             generate_html += '<div class="match-time">' + startTime + '</div>';                      
                             generate_html += '<div class="match-name"><span>' + name + '</span></div>';
-                            generate_html += '<a class="leaderboard-items" href="/market/'+eventId+'" data-link="/events/'+eventId+'">view market</a>';
-                            generate_html += '<div id="prim-' + eventId + '" class="market-main" ></div>';
+                            generate_html += '<a class="leaderboard-items" href="/market/'+eventId+'" data-link="/events/'+eventId+'"></a>';
+                            generate_html += '<div id="prim-' + eventId + '" class="market-main" >Name:' + marketName +' | Type: ' + marketType + '  | Price: ' + marketPrice + '</div>';
                             generate_html += '</div>';
 
 
