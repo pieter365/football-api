@@ -98,7 +98,6 @@
 
         <div class="main-container">
             <div class="main wrapper clearfix">
-
                 <article>
                     <footer>
                         <h3>Football</h3>
@@ -127,6 +126,7 @@
         </div>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous" type="text/javascript"></script>
         <script src="/js/frontpage.js"type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     </body>
 </html>
 

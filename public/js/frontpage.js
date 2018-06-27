@@ -44,8 +44,8 @@
                             generate_html += '<div class="match-cell" data-oc-id="' + eventId + '">';
                             generate_html += '<div class="match-time">' + startTime + '</div>';                      
                             generate_html += '<div class="match-name"><span>' + name + '</span></div>';
-                            generate_html += '<a class="leaderboard-items" href="/market/'+eventId+'" data-link="/events/'+eventId+'"></a>';
-                            generate_html += '<div id="prim-' + eventId + '" class="market-main" >Name:' + marketName +' | Type: ' + marketType + '  | Price: ' + marketPrice + '</div>';
+                            generate_html += '<a class="leaderboard-items" href="/market/'+eventId+'" data-link="/events/'+eventId+'"></a><button class="btnToggle" data-div="prim-' + eventId + '">Main Market</button>';
+                            generate_html += '<div id="prim-' + eventId + '" class="market-main toggleDiv">Name:' + marketName +' | Type: ' + marketType + '  | Price: ' + marketPrice + '</div>';
                             generate_html += '</div>';
 
 
@@ -55,7 +55,15 @@
                               generate_html = 'No Live Football games today.';
                           }    
 
-                        document.getElementById("live_scores").innerHTML = generate_html;       
+                        document.getElementById("live_scores").innerHTML = generate_html;      
+                        jQuery(".toggleDiv").hide(); 
+
+                          jQuery(".btnToggle").click(function() {
+                            var div = jQuery(this).attr("data-div");
+                            jQuery("#" + div).toggle();
+                          });
+
+
                     });
                 }
                 setInterval(getData, 10000);
@@ -63,6 +71,11 @@
                
                 jQuery(function() {
                     getData();
+
+
                 });
+
+
+
 
 

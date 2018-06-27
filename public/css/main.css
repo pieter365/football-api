@@ -435,7 +435,6 @@ nav a:hover {
         }
 
 .market-main {
-  display: block;
   clear: both;
 }
 
@@ -443,4 +442,11 @@ nav a:hover {
           font-size: 12px;
           clear: both;
 }
+
+.btnToggle {
+    float: right;
+    font-size: 12px;
+    background-coloir: #EDEDED;
+}    
+
 
